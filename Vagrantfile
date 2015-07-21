@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder ".", "/home/vagrant/hackathon"  
 
 	config.vm.provider :virtualbox do |vb|
-        	vb.name = "box_hackathon"
+        	vb.name = "Hackathon-Descomplica"
         	vb.customize ["modifyvm", :id, "--memory", "1024"]
         	vb.customize ["modifyvm", :id, "--cpus", "2"]
 	end
