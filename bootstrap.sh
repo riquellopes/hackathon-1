@@ -57,8 +57,7 @@ mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'hackathon'@'%' WITH GRANT OPTION"
 echo "-- Instalando dependencias para o db migrate --"
 apt-get install -y python-pip
 apt-get install -y python-mysqldb
-pip install simple-db-migrate
-#db-migrate -c /home/vagrant/hu-banco-de-dados/migrate/reservas/reservas.conf 
+pip install simple-db-migrate 
 
 #echo "-- Setando arquivo de configuração --"
 #mv /home/vagrant/hackathon/config/settings_local.php.default /home/vagrant/hackathon/config/settings_local.php
