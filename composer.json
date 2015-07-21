@@ -1,7 +1,7 @@
 
 {
     "name": "Hackathon",
-    "type"; "project",
+    "type": "project",
     "require": {
 	"php": ">=5.3.3"
         "silex/silex": "1.2.1",

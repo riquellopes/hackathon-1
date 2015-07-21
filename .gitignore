@@ -18,4 +18,4 @@ web/.htaccess
 web/index.php
 ../web/index.php
 *.DS_Store
-
+server-confs/*
