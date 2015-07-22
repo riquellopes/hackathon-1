@@ -18,7 +18,6 @@
         "symfony/translation": "2.5.2",
         "symfony/validator": "2.5.2",
         "symfony/monolog-bridge": "2.5.2",
-        "symfony/twig-bridge": "2.5.2",
         "symfony/yaml": "2.5.2",
         "php-activerecord/php-activerecord": "v1.1.2",
         "swiftmailer/swiftmailer": "@stable",
