@@ -6,7 +6,7 @@ apt-get update
 
 echo "-- Instalando Node.js"
 curl -sL https://deb.nodesource.com/setup | sudo bash -
-apt-get install nodejs
+apt-get install -y  nodejs
 
 echo "-- Instalando nginx --"
 apt-get install -y nginx
