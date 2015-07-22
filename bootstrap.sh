@@ -8,6 +8,19 @@ echo "-- Instalando Node.js"
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 apt-get install -y  nodejs
 
+echo "-- Instalando Grunt"
+npm install -g grunt-cli
+cd /home/vagrant/hackaton
+echo "{}" > package.json
+npm install grunt --save-dev
+
+echo "-- Instalando o Bower"
+npm install -g bower
+bower install angular
+
+echo "-- Executando os pacotes"
+npm install
+
 echo "-- Instalando nginx --"
 apt-get install -y nginx
 
