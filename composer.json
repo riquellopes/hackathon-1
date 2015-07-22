@@ -3,10 +3,10 @@
     "name": "Hackathon",
     "type": "project",
     "require": {
-	"php": ">=5.3.3"
+	"php": ">=5.3.3",
         "silex/silex": "1.2.1",
         "symfony/browser-kit": "2.5.2",
-	"synfony/class-loader": "2.5.2",
+	"symfony/class-loader": "2.5.2",
         "symfony/console": "2.5.2",
         "symfony/config": "2.5.2",
         "symfony/css-selector": "2.5.2",
