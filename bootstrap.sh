@@ -4,23 +4,6 @@ export DEBIAN_FRONTEND=noninteractive
 echo "-- Atualizado repositório --"
 apt-get update
 
-echo "-- Instalando Node.js"
-curl -sL https://deb.nodesource.com/setup | sudo bash -
-apt-get install -y  nodejs
-
-echo "-- Instalando Grunt"
-npm install -g grunt-cli
-cd /home/vagrant/hackaton
-echo "{}" > package.json
-npm install grunt --save-dev
-
-echo "-- Instalando o Bower"
-npm install -g bower
-bower install angular
-
-echo "-- Executando os pacotes"
-npm install
-
 echo "-- Instalando nginx --"
 apt-get install -y nginx
 
@@ -78,5 +61,22 @@ pip install simple-db-migrate
 
 #echo "-- Setando arquivo de configuração --"
 #mv /home/vagrant/hackathon/config/settings_local.php.default /home/vagrant/hackathon/config/settings_local.php
+
+echo "-- Instalando Node.js"
+curl -sL https://deb.nodesource.com/setup | sudo bash -
+apt-get install -y  nodejs
+
+echo "-- Instalando Grunt"
+npm install -g grunt-cli
+cd /home/vagrant/hackathon
+echo "{}" > package.json
+npm install grunt --save-dev
+
+echo "-- Instalando o Bower"
+npm install -g bower
+bower install angular
+
+echo "-- Executando os pacotes"
+npm install
 
 echo "-- Pronto! --"
