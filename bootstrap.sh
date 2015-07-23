@@ -18,6 +18,7 @@ echo "-- Instalando Dependencias --"
 composer install --working-dir /home/vagrant/hackathon/
 
 echo "-- Configurando Log --"
+mkdir -p /home/vagrant/hackathon/var/logs/
 touch /home/vagrant/hackathon/var/logs/silex_dev.log
 chmod 777 /home/vagrant/hackathon/var/logs/silex_dev.log
 
@@ -64,17 +65,19 @@ pip install simple-db-migrate
 
 echo "-- Instalando Node.js"
 curl -sL https://deb.nodesource.com/setup | sudo bash -
-apt-get install -y  nodejs
+apt-get install -y  nodejs git
 
 echo "-- Instalando Grunt"
-npm install -g grunt-cli
-cd /home/vagrant/hackathon
+cd /home/vagrant/hackathon/
+touch package.json
+chmod 777 package.json
 echo "{}" > package.json
+npm install -g grunt-cli
 npm install grunt --save-dev
 
 echo "-- Instalando o Bower"
 npm install -g bower
-bower install angular
+bower install angular -f --allow-root
 
 echo "-- Executando os pacotes"
 npm install
