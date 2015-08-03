@@ -24,6 +24,7 @@ chmod 777 /home/vagrant/hackathon/var/logs/silex_dev.log
 echo "-- Configurando nginx --"
 cp /home/vagrant/hackathon/server-confs/nginx.conf /etc/nginx/nginx.conf
 cp /home/vagrant/hackathon/server-confs/hackathon.conf /etc/nginx/sites-available/hackathon.conf
+sudo rm -Rf /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/hackathon.conf /etc/nginx/sites-enabled/hackathon.conf
 chown -R www-data:www-data /home/vagrant/hackathon/
 sudo chmod 755 /home/vagrant/hackathon/ -R
