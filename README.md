@@ -6,3 +6,4 @@ Necessário ter instalado no S.O.
 - Vagrant versão 1.4.3
 
 Após realizar o clone do projeto deverá entrar na pasta hackathon e pelo terminal executar o comando vagrant up
+Ao finalizar o vagrant up na pasta do projeto favor rodar o comando composer update
