@@ -14,11 +14,9 @@ vendor/*
 config/settings_local.php
 /node_modules
 web/.htaccess
-../web/.htaccess
+web/.htaccess
 web/index.php
-../web/index.php
 *.DS_Store
 server-confs/*
-/var/logs/*
 var/logs/*
 /bower_components

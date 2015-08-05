@@ -1,0 +1,26 @@
+# Automatically normalize line endings for all text-based files
+* text eol=lf
+
+# Explicitly declare text files we want to always be normalized and converted 
+# to native line endings on checkout.
+*.c text
+*.h text
+
+# Declare files that will always have CRLF line endings on checkout.
+*.sln text eol=crlf
+*.ttf text eol=crlf
+*.eot binary
+*.woff binary
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+*.ttf binary
+*.JPG binary
+*.PNG binary
+*.mo binary
+*.gif binary
+*.GIF binary
+*.mp3 binary
+*.otf binary
+*.exe binary

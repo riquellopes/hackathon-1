@@ -1,0 +1,161 @@
+{% extends layout_login %}
+{% block content %}
+<script src="{{ app.asset_path }}/js/login/login.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        sendForm("{{ url('login') }}");
+        sendFormForgotPassword();
+    });
+</script>
+<section class="row-fluid">
+    <input type="hidden" value="{{ ip }}" id="ip" />
+    <input type="hidden" id="urlAssets" value="{{ app.asset_path }}" />
+    {% if flag == 1 %}
+    <div id="clouds-{{ result }}">
+
+        <div class="cloud x1"></div>
+        <div class="cloud x2"></div>
+
+
+        <div class="box-login-admin row" style="margin-top: 10%">
+            {% else %}
+            <div class="box-login-admin row" style="margin-top: 15%">
+                {% endif %}
+
+                <div class="container">
+                    <div class="alert alert-danger error-user-password" style="display:none"> <strong>Erro!</strong> Usuário ou senha inválidos.</div>
+                    <form role="form" id="formLogin" class="form-horizontal form-login  col-lg-4 col-md-5 col-sm-5 col-xs-10 col-lg-offset-2 col-md-offset-1 col-xs-offset-1">
+                        <div class="form-group">
+
+                            <div>
+                                <img class="img-responsive" src="{{ app.asset_path }}/logo.png" style="padding: 0 0 16px 10%;"/>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <!--<label for="itxEmail" class="col-lg-2 col-md-2 control-label">{{ 'Email'|trans }}</label>-->
+                            <div class="controls">
+                                <input type="email" name="itxEmail" class="form-control" id="itxEmail" placeholder="Digite seu Email">
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <!-- <label for="itxPassword" class="col-lg-2 col-md-2 control-label">{{ 'Password'|trans }}</label>-->
+                            <div class="controls">
+                                <input type="password" name="itxPassword" class="form-control" id="itxPassword" placeholder="Digite sua senha">
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="esqueci-senha controls col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                <a class="laranja under-line font10  forgot-password" data-toggle="modal" data-loading-text="Carregando..." href='#' data-target="#myModalForgot" >Esqueci minha senha</a>
+                            </div>
+
+                            <div class="controls col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                <button type="submit" class="bt-login-small upper pull-right " data-toggle="modal" data-target="#myModal"><strong>Entrar</strong></button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!--MODAL-->
+                    <form role="form" id="formForgot">
+                        <div class="modal fade" id="myModalForgot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="wrap-login">
+                                        <div class="modal-header cor-branca very-dark-blue text-center">
+                                            <button type="button" class="close bt-remove" data-dismiss="modal" aria-hidden="true"><i class="fa fa fa-times"></i></button>
+                                            <p class="cor-branca font24 title-modal"><strong>Digite seu email</strong></p>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group row">
+                                                <div class="controls col-lg-8 col-lg-offset-2">
+                                                    <input type="email" name="forgotEmail" class="form-control" id="forgotEmail" placeholder="Digite seu Email">
+                                                </div>
+                                            </div>
+                                            <div class="mensagem text-center cBoth pd-top20">
+                                                <small class="font12" role="alert"><strong class="mensagemLoad marinho"> Você irá receber um email para confirmar sua alteração de senha.</strong></small>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-successForgot btn-success">Enviar <i class="fa fa-spinner fa-spin js-btLoadinLogin" style="display: none;"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!--MODAL-->
+
+
+                    <div class="box-login-temperatura col-lg-4 col-md-5 col-sm-5 col-xs-10 col-xs-offset-1">
+                        <div class="row bloco-temp-1">
+                            <div class="col-lg-5 col-sm-5 col-xs-6 col-lg-offset-2 col-sm-offset-2 col-xs-offset-1">
+                                <i  id="weatherIcon"> </i>
+                                <span id="weatherType"></span>
+                            </div>
+                            <div class="col-lg-5 col-sm-5 col-xs-5">
+                                <i class="hora"></i>
+                                <span>{{ hora }}</span>
+                            </div>
+                        </div>
+                        <div class="row bloco-temp-2">
+                            <div class="col-lg-12">
+                                <select class="form-control" name="" id="State">
+                                    <option selected="selected" value"">Carregando</option>
+                                    <option value="Acre">Acre</option>
+                                    <option value="Alagoas">Alagoas</option>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Amapá">Amapá</option>
+                                    <option value="Bahia">Bahia</option>
+                                    <option value="Ceará">Ceará</option>
+                                    <option value="Distrito Federal">Distrito Federal</option>
+                                    <option value="Espirito Santo">Espirito Santo</option>
+                                    <option value="Goiás">Goiás</option>
+                                    <option value="Maranhão">Maranhão</option>
+                                    <option value="Minas Gerais">Minas Gerais</option>
+                                    <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                                    <option value="Mato Grosso">Mato Grosso</option>
+                                    <option value="Pará">Pará</option>
+                                    <option value="Paraíba">Paraíba</option>
+                                    <option value="Pernambuco">Pernambuco</option>
+                                    <option value="Piauí">Piauí</option>
+                                    <option value="Paraná">Paraná</option>
+                                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                    <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                                    <option value="Rondônia">Rondônia</option>
+                                    <option value="Roraima">Roraima</option>
+                                    <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                                    <option value="Santa Catarina">Santa Catarina</option>
+                                    <option value="Sergipe">Sergipe</option>
+                                    <option value="São Paulo">São Paulo</option>
+                                    <option value="Tocantins">Tocantins</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <span class="text-temperatura col-md-12 col-sm-12 col-xs-12 text-center"><strong><span id="weatherId">  </span></strong><div><span id="weatherName" style="font-size: medium"></span></div></span>
+                    </div>
+                </div>
+                {% if flag == 1 %}
+                <div class="cloud x3"></div>
+                <div class="cloud x4"></div>
+                <div class="cloud x5"></div>
+                <div style="position: absolute; width: 100%; bottom: 0;">
+                    <img class="img-responsive" src="{{ app.asset_path }}/city.png" alt="" style="width: 100%; height: auto;"/>
+                </div>
+            </div>
+            {% endif %}
+
+            <!--Modal loading...-->
+            <div id="loading-modal">
+                <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="" >
+                            <div class="modal-body" style="padding: 23% 0 0 48%;">
+                                <img class="girar img-responsive" src="{{ app.asset_path }}/images/logos/bolinha.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+{% endblock %}

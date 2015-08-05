@@ -1,0 +1,43 @@
+<?php
+$app['dbConnectionDeploy'] = "mysql://hackathon:hackathon@localhost/hackathon;charset=utf8";
+$app['dbSlaveConnectionDeploy'] = "mysql://hackathon:hackathon@localhost/hackathon;charset=utf8";
+
+$app['cacheConnectionDeploy'] = "10.0.0.12";
+
+$app['cachePortConnectionDeploy'] = "11211";
+
+$app['sessionConnectionDeploy'] = "10.0.0.12";
+
+$app['sessionPortConnectionDeploy'] = "11211";
+
+$app['awsAccessKeyDeploy'] = '';
+
+$app['awsSecretKeyDeploy'] = '';
+
+$app['pathStaticDeploy'] = '';
+
+$app['pathAssetsVersion'] = '';
+$app['pathAssetsDeploy'] = '/assets' . $app['pathAssetsVersion'];
+
+$app['pathUploadImageDeploy'] = '/reservas/hmg/';
+
+$app['sendGridConnectionDeploy'] = array(
+    'host' => 'smtp.sendgrid.net',
+    'port' => 465,
+    'username' => '',
+    'password' => '',
+    'encryption' => 'ssl',
+    'auth_mode' => 'login'
+);
+
+$app['proxyDeploy'] = false;
+
+// new
+
+$app['siteAdress'] = 'http://www.google.com';
+
+$app['serverName'] = 'http://10.0.0.12';
+
+$app['redisConnection'] = '10.0.0.12:6379';
+
+$app['cookieSiteDomain'] = '10.0.0.12';

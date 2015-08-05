@@ -1,0 +1,57 @@
+/***EFEITOS***/
+.transicao {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.girar {
+    -webkit-animation:girar .5s  linear infinite;
+    -moz-animation:girar .5s linear infinite;
+    -o-animation:girar .5s linear infinite;
+    animation:girar .5s linear infinite;
+}
+
+@-webkit-keyframes girar { 100% { -webkit-transform: rotate(360deg);} }
+@-moz-keyframes girar { 100% { -moz-transform: rotate(360deg); } }
+@-o-keyframes girar { 100% { -O-transform: rotate(360deg); } }
+@keyframes girar { 100% { transform:rotate(360deg); } }
+
+
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

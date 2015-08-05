@@ -1,0 +1,872 @@
+/* Global Styles */
+body {
+    background: #f1f2f7;
+    font-family: 'Lato', sans-serif !important;
+    font-size: 12px;
+    overflow-x: hidden;
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+
+#page-wrapper, .page-wrapper {
+    width: 100%;
+    /*padding: 5px 15px;*/
+}
+#logo {
+    padding-left: 0;
+}
+.link-tour span {
+    margin-right: 5px;
+}
+.position-seta-tour {
+    right: 24px;
+}
+.bt-start-tour {
+    border: none;
+    color: #fff;
+    width: 60%;
+    height: 30px !important;
+    padding: 0 !important;
+}
+.bt-start-tour:hover {
+    border-bottom: 1px solid #29622f;
+}
+.dropdown-tour {
+    top: 62px;
+}
+.container-button-tour {
+    text-align: center;
+}
+.container-button-tour button{
+    margin-left: 0 !important;   
+}
+/* Nav============================ */
+.header-menu-acao {
+    padding: 0;
+}
+.header-menu-acao li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.menu-tablet {
+    display: none;
+}
+.navbar-admin {
+    padding-bottom: 1em;
+    box-shadow: 0 0 5px #ccc;
+}
+.main-container {
+    margin-top: 6em;
+    padding: 1em;
+    background: #fff;
+}
+.main-container.noBg {
+    background: none !important;
+    padding:0 !important;
+    border: none !important;
+
+}
+.main-dash{
+    background: none;
+    border: none;
+}
+.box-sidebar {
+    padding-top: 8em;
+}
+.box-img-hotel {
+    margin-bottom: 3em;
+}
+.content-user-login {
+    border-radius: 50%;
+    background: #104d73;
+    width: 23%;
+    height: auto;
+    padding: 6px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.content-user-login i{
+    position: relative;
+    color: #447da0;
+    bottom: -15px;
+}
+.user-login-admin {
+    color: #447da0;
+}
+#lista-hover > li > a {
+    color: #fff;
+}
+#lista-hover > li > a:hover {
+    background: #042743;
+}
+
+#lista-hover > div > li > a {
+    display: block;
+    padding: 10px 15px;
+    position: relative;
+    background: #00598f;
+}
+#lista-hover > div > li > a:hover, .nav > li > a:focus {
+    background: #042743;
+    color: #fff;
+    text-decoration: none;
+}
+
+#lista-hover > li > a:hover, .nav > li > a:focus {
+    background-color: #042743;
+    text-decoration: none;
+    outline: none;
+}
+
+#lista-hover li a {
+    font-size: 11px;
+    padding: 0!important;
+}
+.seta-menu-hoteleiro {
+    margin-top: 14px;
+    margin-right: 7px;
+}
+/*Imagem hoteleiro*/
+.box-img-hotel img {
+    display: inline !important;
+    background: #fff;
+    border-radius: 10px;
+}
+/*New menu*/
+.ico-menu-dashboard {
+    background: #043f64;
+    color: #35759e;
+    width: 53px;
+    height: 45px;
+    padding: 15px;
+    position: relative;
+}
+
+.box-ico-menu small {width: 115px;}
+.box-ico-menu {
+    width: 50px;
+    overflow: hidden;
+    margin-right: 1em;
+}
+.box-ico-menu, .box-ico-menu small {    
+    height: 45px;   
+    display: inline-block;    
+    vertical-align: middle;
+}
+.move-ico-left {position: relative;}
+#lista-hover > li,
+#property > li {
+    border-left: 2px solid #043f64;
+}
+#lista-hover > li:hover,
+#property > li a:hover,
+.menu-selecionado-extranet{
+    border-left: 2px solid #dfa05d !important;
+}
+.move-ico-left{
+    left: 0;
+    position: relative;
+    transition: all .2s;
+}
+#lista-hover > li a:hover small.move-ico-left,
+#property > li a:hover small.move-ico-left,
+.menu-selecionado-extranet a small.move-ico-left{
+    left: -5.5em !important;
+}
+
+/* Nav Messages */
+
+.messages-dropdown .dropdown-menu .message-preview .avatar,
+.messages-dropdown .dropdown-menu .message-preview .name,
+.messages-dropdown .dropdown-menu .message-preview .message,
+.messages-dropdown .dropdown-menu .message-preview .time {
+    display: block;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .avatar {
+    float: left;
+    margin-right: 15px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .name {
+    font-weight: bold;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .message {
+    font-size: 12px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .time {
+    font-size: 12px;
+}
+
+
+/* Nav Announcements */
+
+.announcement-heading {
+    font-size: 50px;
+    margin: 0;
+}
+
+.announcement-text {
+    margin: 0;
+}
+
+/* Table Headers */
+
+table.tablesorter thead {
+    cursor: pointer;
+}
+
+table.tablesorter thead tr th:hover {
+    background-color: #f5f5f5;
+}
+
+/* Flot Chart Containers */
+
+.flot-chart {
+    display: block;
+    height: 400px;
+}
+
+.flot-chart-content {
+    width: 100%;
+    height: 100%;
+}
+#lista-hover li {
+    border-top: 1px dotted #004e7e;
+    cursor: pointer;
+}
+#lista-hover li:last-child {
+    border-bottom: 1px dotted #004e7e;
+}
+
+/***Menu mobile***/
+#lista-hover-top li a:hover{
+    background-color: #042743;
+}
+
+/* Edit Below to Customize Widths > 768px */
+@media (min-width:768px) {
+
+    /* Wrappers */
+
+    #wrapper {
+        /*padding-left: 355px/*225px*/;
+    }
+
+    #page-wrapper, .page-wrapper {
+        /*padding: 15px 25px;*/
+    }
+
+    /* Side Nav */
+
+    .side-nav {
+        margin: 0 !important/*-225px*/;
+        left: 225px;
+        width: 310px/*225px*/;
+        position: fixed;
+        top: 100px;
+        height: 100%;
+        border-radius: 0;
+        border: none;
+        /*background-color: #222222;*/
+        overflow-y: auto;
+        display: none;
+    }
+    .box-sidebar {
+        /*padding-left: 1%;*/
+        width: 278px;       
+        position: fixed;
+        height: 100%;
+        background: #00395c;
+        overflow-y: auto;
+    }
+
+
+    /* Bootstrap Default Overrides - Customized Dropdowns for the Side Nav */
+
+    .side-nav>li.dropdown>ul.dropdown-menu {
+        position: relative;
+        min-width: 225px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+
+    .side-nav>li.dropdown>ul.dropdown-menu>li>a {
+        color: #999999;
+        padding: 15px 15px 15px 25px;
+    }
+
+    .side-nav>li.dropdown>ul.dropdown-menu>li>a:hover,
+    .side-nav>li.dropdown>ul.dropdown-menu>li>a.active,
+    .side-nav>li.dropdown>ul.dropdown-menu>li>a:focus {
+        color: #fff;
+        background-color: #080808;
+    }
+
+    .navbar-inverse #lista-hover > li > a:hover,
+    .navbar-inverse #lista-hover > li > a:focus {
+        color: #999;
+        background-color: transparent;
+    }
+    .navbar-inverse #lista-hover > .active > a,
+    .navbar-inverse #lista-hover > .active > a:hover,
+    .navbar-inverse #lista-hover > .active > a:focus {
+        color: #999;
+        background-color: #fff;
+    }
+
+    .side-nav>li>a {
+        width: 299px/*225px*/;
+    }
+
+    .navbar-inverse .navbar-nav>li>a:hover,
+    .navbar-inverse .navbar-nav>li>a:focus {
+        background-color: #080808;
+    }
+
+    /* Nav Messages */
+
+    .messages-dropdown .dropdown-menu {
+        min-width: 300px;
+    }
+
+    .messages-dropdown .dropdown-menu li a {
+        white-space: normal;
+    }
+
+    .navbar-collapse {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}
+@media (min-width:320px) and (max-width:765px){
+    #container-login-admin {
+        width: 100%;
+    }
+}
+@media (min-width:320px) and (max-width:768px){
+    .container-daterv {
+        margin: 0 !important;
+    }
+    .form-relatorio-vendas {
+        padding-left: 15%!important;
+        padding-right: 15%!important;
+    }
+}
+@media (min-width:320px) and (max-width:793px){
+    .container-daterv img, .container-daterv2 img {
+        top: 7px !important;
+    }
+    .header-pos {
+        padding-bottom: 15px;
+    }
+    .busca-data-xs {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    .busca-data-xs > div.row {
+        text-align: center;        
+    }    
+    .container-title-xs {
+        background: #00395c;       
+        padding: 14px 0;
+        margin-bottom: 15px;
+    }
+    .container-title-xs,
+    .busca-data-xs {
+        width: 100%!important;
+        text-align: center;
+    }
+    .busca-data-xs form,
+    .busca-data-xs form {
+        float: none !important;
+    }
+    .container-title-xs i {
+        display: none;
+    }
+}
+@media (min-width:320px) and (max-width:480px){    
+    .container-daterv2 {margin-left: 0 !important; margin-right: 0 !important;}  
+    #table-relatorio {font-size: 1.2em !important;}
+}
+@media (max-width:1100px){
+    .main {
+        margin-left: 0 !important;
+    }
+    .box-img-hotel {
+        display: none;
+    }
+    .box-sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: 110;
+    }
+    .main-container {
+        margin-top: 7em;
+    }
+    .menu-tablet {
+        width: 120px;
+        bottom: -33px;
+        right: 15px;
+        border-top: 0;
+        border-radius: 0 0 4px 4px;
+        display: block !important;
+    }
+    .box-sidebar {
+        display: none;
+    }
+
+}
+@media(max-width:767px){
+    .navbar-toggle {
+        margin-top: 15px;
+        /*background: #00395c;*/
+    }
+    .navbar-toggle span {
+        background: #00395c;
+    }
+    .menu-tablet {
+        display: none !important;
+    }
+    .navbar-nav {
+        background: #00395c;
+    }
+}
+@media (min-width: 768px) {
+    .modal-md {
+        width: 600px;
+    }
+}
+@media (min-width: 845px){
+    .box-campo-busca-propriedade.form-group:first-child {
+        width: 30%;
+    }
+}
+.main {
+    margin-left: 289px;
+}
+
+    .table-overflowy {
+        overflow-y: auto;
+    }
+
+.box-dashboard h1 {
+    margin-top: 0;
+}
+
+/***FORMULÁRIO DE CADASTRO**/
+.box-tab-register li a {
+    font-size: 16px !important;
+    background: #fbfafa;
+}
+.box-tab-register li a.active {
+    background: #fff;
+}
+.box-star {
+    padding: 2.7em 0 0;
+}
+.ui-datepicker-trigger {
+    position: absolute;
+    left: 151px;
+    z-index: 100;
+    top: 7px;
+}
+.data-register img {
+    left: 116px; /*Ajuste da imagem de calendário cadastro de hoteís*/
+}
+
+.date-register img {
+    left: 100px;
+}
+
+/***FORMULÁRIO DE EXIBIÇÃO**/
+.box-star-show {
+    padding: 0;
+}
+
+.box-checkin-hotel {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+#contato-principal,
+#contato-reserva,
+#contato-financeiro,
+#contato-operacional,
+#contato-negocios {
+    margin-bottom: 1em;
+}
+.box-bt-remove {
+    margin-top: 1em;
+}
+.botao-enviar-cadastro-hotel {
+    /*margin: 1em 0 2em;
+    padding-bottom: 1em;*/
+}
+
+/*** Estilo especifico página acomodação ***/
+.text-metroquadrado {
+    padding: 35px 0 0;
+}
+.pos-editar {
+    padding: 1em 0;
+}
+.box-caracteristica-acomodacao div:first-child {
+    margin-top: 0 !important;
+}
+.container-cobranca input {
+    width: 51% !important;
+    float: left;
+    margin-right: 1em;
+}
+
+/***MODAL POLITICA DE CANCELAMENTO****/
+.box-cobranca-politica select.form-control {
+    /* width: 83% !important;*/
+}
+.box-semana-modal label,
+.box-oferta-acomodacao label {
+    margin-top: 0!important;
+}
+.box-semana-modal,
+.box-data-tarifa {
+    margin: 21px 0 0;
+}
+.box-semana-modal label,
+.box-data-tarifa label,
+.box-oferta-acomodacao label {
+    margin-bottom: 24px;
+}
+#ui-datepicker-div {
+    z-index: 2000 !important;
+}
+.box-interno-politica {
+    float: left;
+    width: 100%;
+}
+.popover-policy {
+    width: 100%;
+    top: -26px;
+    right: 56px;
+}
+.data-policy img {
+    left: 129px !important;
+}
+
+/***MODAL TAXAS****/
+.box-semana-taxas label {
+    margin-bottom: 1em;
+}
+
+/***MODAL POLÍTICAS***/
+.box-opcao-policy,
+.box-adicionar {
+    padding-top: 19px;
+}
+
+/***MODAL PHOTOS***/
+.modal-dialog {
+    top: 3em;
+}
+
+/***Modal margem flutuante***/
+.box-contrato-aplicado {
+    padding-top: 40px; 
+}
+.box-date-flutuante1 img {
+    left: 126px !important;
+}
+
+/***Modal tarifa(tarifas e disponibilidade)***/
+.a-underline.azul-light {
+    color: #3497ff;
+}
+.a-underline.azul-light:hover {
+    text-decoration: none;
+}
+.js-TariffBase.no-border[disabled] {
+    cursor: default;
+    background: #fff;
+    box-shadow: none;
+}
+/***HEADER MOBILE ESCONDIDO***/
+.mobile-header {
+    display: none;
+}
+
+.alert-admin{
+    display: none;
+}
+.alert-display{
+    display: block;
+    margin: 5px;
+}
+
+#jsError{
+    position: fixed;
+    right: 0;
+    width: 500px;
+    z-index: 9000;
+    margin-top: 65px;
+}
+
+
+.form-horizontal .has-feedback .form-control-feedback {
+    top: 45px;
+    right: -15px;
+}
+
+.validate-form, .validate-form-modal {
+    position: relative;
+}
+.validate-form .form-control-feedback, .validate-form-modal .form-control-feedback{
+    right: -30px !important;
+    top: 5px !important;
+}
+
+.validate-form-add .form-control-feedback {
+    right: -15px !important;
+    top: 25px !important;
+}
+
+
+.box-status-cadastro {
+    padding: 0 15px;
+}
+.open a:focus {color:#428bca !important;}
+.text-tariffMin {
+    margin-left: 5px;
+}
+
+/***MODAL DADOS DA RESERVA***/
+.title-dados-comprador h4 {
+    padding: 10px 1%;
+    border-radius: 0 4px 0 4px;
+    box-shadow: 1px 2px 6px #555;
+}
+.title-dados-comprador h4 i {
+    margin-right: 5px;
+}
+.container-info-reserva {
+    margin: 10px 0 20px;
+}
+
+/*.box-caracteristica-acomodacao .checkbox {
+    width: 30%;
+    margin-right: 1%;
+    display: inline-block;
+}*/
+
+.loading-bar {
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    box-shadow: inset 0px -45px 30px -40px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    margin: 20px auto;
+    font-family: "museo-sans", sans-serif;
+    border: 1px solid #ddd;	
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.loading-bar:hover {
+    box-shadow: inset 0px 45px 30px -40px rgba(0, 0, 0, 0.05);
+}
+
+/*Status propriedades cadastradas*/
+.status-verde {color: #5ac765;}
+.status-amarelo {color: #ffff00;}
+.status-vermelho {color: #ff0000;}
+.status-azul {color: #00598f;}
+
+/***Busca propriedade relatório de vendas e data***/
+.form-relatorio-vendas label {
+    padding-top: 5px;
+}
+.text-labe {
+    color: #bddaf7;
+}
+.busca-relatorio-proprieda,
+.form-daterv {
+    background: transparent;
+    border: 1px solid #fff;
+    padding-left: 22px;
+    color: #bddaf7;    
+    height: 30px !important;
+}
+.busca-relatorio-proprieda {
+    margin-top: 10px;
+    margin-right: 1%;
+    width: 70%;        
+}
+.form-relatorio-vendas {
+    margin-top: 7px;
+    padding-right: 5%;
+}
+.container-daterv img,
+.container-daterv2 img {
+    top: 7px;
+    left: 4px;
+}
+.container-daterv {
+    margin-left: .5em;
+    margin-right: .5em;
+}
+.btn-busca-relatorio {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;    
+    padding: 0;
+    position: relative;
+    background: #fff;
+}
+.btn-busca-relatorio:hover {
+    transform: scale(1.1);
+    transition: all .3s;
+}
+.btn-busca-relatorio:after {
+    content: ' ';
+    box-shadow: 2px 2px rgba(85,85,85,0);
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    transform: rotate(-90deg);
+    transition: all .3s;
+}
+.btn-busca-relatorio:hover:after{
+     box-shadow: 1px 1px rgba(85,85,85,1);
+     transform: rotate(0deg);
+}
+.container-btn-reservas {
+    margin-left: .5em;
+}
+/***Filtro e ações página propriedade cadastrada***/
+.box-campo-busca-propriedade input,
+.box-campo-busca-propriedade select {
+    width: 100% !important;
+}
+/*estilo para placeholder*/
+.container-daterv input::-webkit-input-placeholder{color: #bddaf7;}
+.container-daterv input::-moz-placeholder{color: #bddaf7;}
+.container-daterv2 input::-webkit-input-placeholder{color: #bddaf7;}
+.container-daterv2 input::-moz-placeholder{color: #bddaf7;}
+
+@media (min-width:360px) and (max-width: 480px){
+    .busca-relatorio-proprieda{
+        width: 35%;   
+    }    
+}
+.busca-relatorio-proprieda:focus{
+    background: #fff;
+    color: #555;
+    font-weight: bold;
+}
+/*estilo para placeholder*/
+.busca-relatorio-proprieda::-webkit-input-placeholder{
+    color: #bddaf7;
+}
+.busca-relatorio-proprieda::-moz-input-placeholder{
+    color: #bddaf7;
+}
+
+/***Formulário lista de reservas***/
+.box-filtro-reservas img {
+    top: 29px;
+    left: 80%;
+}
+.box-filtro-reservas button {
+    margin-top: 25px;
+}
+.btn-visualizar-reservas {
+    padding: 0 6px !important;
+}
+
+.espacamento-descricao-busca{
+    margin-top: 10px;
+}
+
+/***Página de usuários cadastrados, papéis cadastrados, redes cadastradas***/
+.form-usuario-cadastrado button,
+.form-papel-cadastrado button,
+.form-redes-cadastrado button {
+    margin-top: 25px;
+}
+.box-campo-busca-propriedade:first-child {
+    width: 100%;
+}
+/***Tabela de propriedade***/
+.table-propriedades tbody tr td,
+.table-propriedades thead tr th {
+    border-right: 1px solid #ddd;
+}
+.table-propriedades thead tr th {
+    color: #555;
+}
+
+.table-propriedades tbody tr:hover {background: #fbfbf3;}
+.table-propriedades tbody tr:hover td div.box-edit a.circle-blue,
+.table-propriedades tbody tr:hover td div.box-edit2 a.circle-blue,
+.table-propriedades tbody tr:hover td div.box-action a.circle-blue {
+    background: #508bc8;
+}
+.table-propriedades tbody tr:hover td div.box-edit a.circle-green,
+.table-propriedades tbody tr:hover td div.box-edit2 a.circle-green,
+.table-propriedades tbody tr:hover td div.box-action a.circle-green {
+    background: #72ba90;
+}
+.table-propriedades tbody tr:hover td div.box-edit a.circle-yellow,
+.table-propriedades tbody tr:hover td div.box-edit2 a.circle-yellow,
+.table-propriedades tbody tr:hover td div.box-action a.circle-yellow {
+    background: #f3a817;
+}
+.table-propriedades tbody tr:hover td div.box-edit a.circle-red,
+.table-propriedades tbody tr:hover td div.box-edit2 a.circle-red,
+.table-propriedades tbody tr:hover td div.box-action a.circle-red {
+    background: #e85d5d;
+}
+
+.box-edit,
+.box-action {
+    width: 9em;
+    text-align: center;
+}
+/***
+===================Página de oferta=================
+***/
+.numero-noite-oferta {
+    width: 12%;
+    margin: 0 5px;
+}
+/***
+===================Alertas=================
+***/
+.box-alert {
+    margin-top: 13px;
+}
+
+/***
+=================Export List Propert ==============
+***/
+.text-export {
+    margin-bottom: 25px;
+}
+.btn .badge-btn.bg-vermelho-badge {
+    position: absolute;
+    right: 0;
+    top: -10px;
+}

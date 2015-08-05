@@ -1,0 +1,109 @@
+Array
+(
+[property] => Array
+(
+[id] => 11
+[property_type_id] => 1
+[chain_id] => 1
+[name] => Esmeralda Praia & Hotel
+[cep] => 59090-050
+[adress] => Rua Francisco Gurgel, 1160 - Ponta Negra
+[city] => Natal
+[citysite] => natal
+[state] => Rio Grande do Norte
+[country] => Escolha seu país
+[referencepoints] => O centro histórico está a 10 minutos de carro e o Aeroporto Internacional de São Gonçalo do Amarante fica a 50 minutos.
+[latitude] => -5.87064791441922
+[longitude] => -35.1790595054626
+[timezone] => -3.0
+[propertynetwork] => 2
+[checkinof] => 14:00
+[checkinuntil] => 14:00
+[checkoutof] => 12:00
+[checkoutuntil] => 12:00
+[billingresponsiblename] => Davide Voccia
+[billingresponsibleemail] => davide.voccia@esmeraldapraiahotel.com.br
+[billingresponsiblebank] => Itaú
+[billingresponsibleagency] => 6530
+[billingresponsiblecurrentaccount] => 05180-1
+[billingresponsibletypeaccount] => 2
+[billingresponsiblevalue] => 04.201.876/0001-57
+[billingresponsibletypeperson] => 1
+[description] => No Esmeralda Praia Hotel, os viajantes do Hotel Urbano têm acesso direto à Praia de Ponta Negra e vista panorâmica para o Morro do Careca.
+
+O Hotel 5 estrelas oferece aos seus visitantes regime de pensão completa em seu restaurante com comidas regionais, além de seus hóspedes poderem contar com um parque aquático e academia.
+
+Os quartos são equipados com ar-condicionado, TV a cabo e frigobar. Além disso, algumas unidades também dispõem de varanda com vista para o mar.
+
+Para maior comodidade de seus hóspedes, o Esmeralda também oferece conexão à internet Wi-Fi e estacionamento grátis.
+
+*City Tour grátis apenas para reservas com mínimo de 3 noites.
+[qtdrooms] => 2153
+[cnpj] => 04.201.876/0001-57
+[status] => 1
+[rating] => 5
+[remove] => 0
+[twitter] =>
+[avatar] =>
+[smalldescription] => Resort com vista para o Morro do Careca e todas as refeições inclusas!
+[availability_published] => 1
+[id_oferta] => 57044
+[id_oferta_opcao] => 1356579
+[namesite] => esmeralda-praia-hotel
+[no_fees] => 0
+[updated_at] => Array
+(
+[date] => 2014-10-15 11:11:07.000000
+[timezone_type] => 2
+[timezone] => BRT
+)
+
+[neighborhood_id] =>
+[city_id] =>
+[state_id] =>
+[neighborhood] =>
+)
+
+[primary_image] => Array
+(
+[id] => 722
+[type] => 0
+[type_transmission] => 2
+[property_id] => 11
+[title] => CAPA ATUALIZADA ESMERALDA.png
+[description] => Piscina
+[path] => CAPA ATUALIZADA ESMERALDA.png
+[date] => 1409065728
+)
+
+[checkIn] => 2014-11-08
+[checkOut] => 2014-12-14
+[adults] => 2
+[children] => 0
+[dailies] => 36
+[ages] => Array
+(
+)
+
+[rooms] => Array
+(
+[56] => Array
+(
+[id] => 56
+[tariff] => 12643.56
+[alias] => Apartamento Sem Vista Mar
+[meal] => Pensão Completa
+[quantity] => 1
+[promotion] => Array
+(
+)
+
+)
+
+)
+
+[subtotal] => 12643.56
+[tax] => 1724.04
+[total_custo] => 11052
+[total] => 14367.6
+)

@@ -16,15 +16,19 @@ mv composer.phar /usr/local/bin/composer
 
 echo "-- Instalando Dependencias --"
 composer install --working-dir /home/vagrant/hackathon/
+cd /home/vagrant/hackathon/
+/usr/local/bin/composer self-update
+composer update
 
 echo "-- Configurando Log --"
+mkdir -p /home/vagrant/hackathon/var/logs/
 touch /home/vagrant/hackathon/var/logs/silex_dev.log
 chmod 777 /home/vagrant/hackathon/var/logs/silex_dev.log
 
 echo "-- Configurando nginx --"
+sudo rm -f /etc/nginx/sites-enabled/default
 cp /home/vagrant/hackathon/server-confs/nginx.conf /etc/nginx/nginx.conf
 cp /home/vagrant/hackathon/server-confs/hackathon.conf /etc/nginx/sites-available/hackathon.conf
-sudo rm -Rf /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/hackathon.conf /etc/nginx/sites-enabled/hackathon.conf
 chown -R www-data:www-data /home/vagrant/hackathon/
 sudo chmod 755 /home/vagrant/hackathon/ -R
@@ -52,7 +56,7 @@ echo "-- Configurando MySql --"
 mysql -uroot -e "create database hackathon"
 
 echo "-- Criando Usuário --"
-mysql -e "create user 'hackathon'@'%' identified by 'h4ck4th0n'"
+mysql -e "create user 'hackathon'@'%' identified by 'hackathon'"
 mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'hackathon'@'%' WITH GRANT OPTION"
 
 echo "-- Instalando dependencias para o db migrate --"
@@ -60,8 +64,8 @@ apt-get install -y python-pip
 apt-get install -y python-mysqldb
 pip install simple-db-migrate 
 
-#echo "-- Setando arquivo de configuração --"
-#mv /home/vagrant/hackathon/config/settings_local.php.default /home/vagrant/hackathon/config/settings_local.php
+echo "-- Setando arquivo de configuração --"
+mv /home/vagrant/hackathon/config/settings_local.php.default /home/vagrant/hackathon/config/settings_local.php
 
 echo "-- Instalando Node.js"
 curl -sL https://deb.nodesource.com/setup | sudo bash -
