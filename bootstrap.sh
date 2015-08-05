@@ -65,7 +65,7 @@ apt-get install -y python-mysqldb
 pip install simple-db-migrate 
 
 echo "-- Setando arquivo de configuração --"
-mv /home/vagrant/hackathon/config/settings_local.php.default /home/vagrant/hackathon/config/settings_local.php
+cp /home/vagrant/hackathon/config/settings_local.php.default /home/vagrant/hackathon/config/settings_local.php
 
 echo "-- Instalando Node.js"
 curl -sL https://deb.nodesource.com/setup | sudo bash -
