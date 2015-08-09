@@ -6,7 +6,7 @@
     "Gabriel 'Barbier' <gabrielnasb@gmail.com>",
     "Henrique Lopes",
     "Victor Narciso",
-    "Paulo Pupo"  
+    "Paulo Pupo"
   ],
   "license": "MIT",
   "ignore": [
@@ -15,5 +15,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "material-design-lite": "~1.0.2",
+    "angular-material": "~0.10.0"
+  }
 }
