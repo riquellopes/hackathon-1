@@ -50,4 +50,16 @@ class ApiController extends BaseController
 
         return $this->app->json($misssoes);
     }
+
+    public function carreiras(){
+        $carreiras = array(
+            array("nome"=>"Matemático", "icone"=>""),
+            array("nome"=>"Programador", "icone"=>""),
+            array("nome"=>"Diplomata", "icone"=>""),
+            array("nome"=>"Dentista", "icone"=>""),
+            array("nome"=>"Médico", "icone"=>"")
+        );
+
+        return $this->app->json($carreiras);
+    }
 }
