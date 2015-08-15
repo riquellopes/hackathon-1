@@ -2,6 +2,5 @@
 
 require __DIR__ . "/controllers.php";
 
-    $app->get('/login', "LoginController:index");
-    $app->post('/login/', "LoginController:login")->bind('login');
-    $app->get('/sair/', "LoginController:logout")->bind('sair');
+    $app->get('/', "SiteController:index")->bind('home');
+    $app->get('/api', "Apiontroller:home")->bind('api');

@@ -1,8 +1,5 @@
 <?php
 
-use BusinessLogic\Error\Models\Error;
-use BusinessLogic\Helper\RoutesHelper;
-use Controllers\ErrorController;
 use Silex\Application;
 use Silex\Provider\DoctrineServiceProvider;
 use Silex\Provider\SecurityServiceProvider;
@@ -15,13 +12,7 @@ use Silex\Provider\UrlGeneratorServiceProvider;
 use Silex\Provider\ValidatorServiceProvider;
 use SilexMemcache\MemcacheExtension;
 use Symfony\Component\HttpFoundation\Session\Storage\Handler\MemcachedSessionHandler;
-use Symfony\Component\Translation\Loader\YamlFileLoader;
 use Binfo\Silex\MobileDetectServiceProvider;
-use BusinessLogic\ACL\AccessServiceProvider;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-
-//use ActiveRecord;
 
 $app = new Application();
 
@@ -34,7 +25,6 @@ $app->register(new ValidatorServiceProvider());
 $app->register(new DoctrineServiceProvider());
 $app->register(new SecurityServiceProvider());
 $app->register(new MobileDetectServiceProvider());
-$app->register(new AccessServiceProvider());
 
 if (file_exists(__DIR__ . '/../config/settings_local.php')) {
     require __DIR__ . '/../config/settings_local.php';
@@ -66,8 +56,8 @@ $app['session.storage.handler'] = $app->share(function () use ($app) {
 
 // firewall -> restrição de rotas
 $app['security.firewalls'] = array(
-    'login' => array(
-        'pattern' => '^/login',
+    'site' => array(
+        'pattern' => '^/',
     ),
     'secured' => array(
         'pattern' => '^.*$',
@@ -80,33 +70,15 @@ $app['security.firewalls'] = array(
     ),
 );
 
-//geração de senha de usuário
-//var_dump($app['security.encoder.digest']->encodePassword('adminperfil3', '')) ; exit();
-// ACL -> Criação de níveis de acesso ao sistema
-$app['security.access_rules'] = array(
-    array('^/admin', 'ROLE_ADMIN')
-);
-
 $lang = 'pt-BR';
 
 $app->register(new TranslationServiceProvider(), array(
     'locale_fallback' => $lang,
 ));
 
-$app['translator'] = $app->share(
-    $app->extend('translator', function ($translator, $app) use ($lang) {
-        $translator->addLoader('yaml', new YamlFileLoader());
-        $translator->addResource('yaml', __DIR__ . '/../config/locales/' . $lang . '.yml', $lang);
-
-        return $translator;
-    })
-);
-
 require __DIR__ . '/../config/routes.php';
 
 $app['twig.path'] = array(__DIR__ . '/../templates');
-
-$app['asset_path'] = $app['pathAssetsDeploy'];
 
 $app['title_page'] = 'Hackathon-Descomplica';
 
@@ -118,15 +90,10 @@ $app['request'] = '';
 
 $app['usrData'] = array();
 
-$app['isAdmin'] = "FALSE";
-
 /*Chave para serviços rest*/
 $app['permission_rest'] = 'dac825842c5f84237dd4e530c71f38c7';
 
 $app->register(new SwiftmailerServiceProvider());
-
-$app['swiftmailer.options'] = $app['sendGridConnectionDeploy'];
-
 
 $app->error(function (Exception $e, $code) use ($app) {
 

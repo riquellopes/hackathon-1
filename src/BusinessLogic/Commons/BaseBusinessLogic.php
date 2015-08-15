@@ -3,7 +3,6 @@
 namespace BusinessLogic\Commons;
 
 use Silex\Application;
-use BusinessLogic\Helper\LoggerHelper;
 
 class BaseBusinessLogic
 {
@@ -41,27 +40,6 @@ class BaseBusinessLogic
         } catch (\Exception $e) {
             throw $e;
         }
-    }
-
-    public function useLogger() {
-        $this->logger = new \BusinessLogic\Helper\LoggerHelper();
-    }
-
-    protected function doLogDataBaseError($exception, $application = LoggerHelper::EXTRANET_APPLICATION){
-        if ($this->logger == NULL) {
-            $this->useLogger();
-        }
-        
-        #write log
-        $this->logger->setSourceFile($exception->getFile());
-        $this->logger->setLineFile($exception->getLine());
-        $this->logger->setApplication($application);
-        $this->logger->write(
-            LoggerHelper::GRAYLOG2,
-            LoggerHelper::ERROR,
-            "Falha ao conectar com o banco de dados",
-            sprintf(' with message "%s"', $exception->getMessage())
-        );
     }
     
     public static function array_sort($array, $on, $order = SORT_ASC)
