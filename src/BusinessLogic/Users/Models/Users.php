@@ -1,6 +1,6 @@
 <?php
 
-namespace BusinessLogic\Users\Model;
+namespace BusinessLogic\Users\Models;
 
 use \BusinessLogic\Commons\BaseModel;
 
