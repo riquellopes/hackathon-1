@@ -4,10 +4,7 @@ namespace BusinessLogic\Conteudos;
 
 use BusinessLogic\Commons\BaseBusinessLogic;
 use BusinessLogic\Conteudos\Models\Conteudos;
-<<<<<<< Updated upstream
-=======
-use BusinessLogic\Pontos\Models\Pontos;
->>>>>>> Stashed changes
+
 
 class ConteudosLogic extends BaseBusinessLogic
 {

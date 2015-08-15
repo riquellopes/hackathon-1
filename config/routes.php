@@ -4,6 +4,8 @@ require __DIR__ . "/controllers.php";
 
     $app->get('/', "SiteController:index")->bind('home');
 
+    $app->get('/step/{id}', "SiteController:step")->bind('step');
+
     $app->get('/api', "ApiController:home")->bind('api');
 
     $app->get('/api/medalhas', "ApiController:medalhas")->bind('api_medalhas');
