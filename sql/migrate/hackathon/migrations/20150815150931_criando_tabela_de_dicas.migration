@@ -1,0 +1,22 @@
+#-*- coding:utf-8 -*-
+SQL_UP = u"""
+CREATE TABLE dicas
+(
+    id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    type_id INT(11) UNSIGNED NOT NULL,
+    dicas_id INT(11) UNSIGNED NOT NULL,
+    created_at TIMESTAMP DEFAULT '0000-00-00 00:00:00' NOT NULL,
+    updated_at TIMESTAMP DEFAULT '0000-00-00 00:00:00' NOT NULL,
+    INDEX fk_types_idx (type_id ASC),
+      CONSTRAINT fk_types
+        FOREIGN KEY (type_id)
+        REFERENCES types (id)
+        ON DELETE CASCADE
+        ON UPDATE NO ACTION
+)
+ENGINE = InnoDB;
+"""
+
+SQL_DOWN = u"""
+DROP TABLE dicas
+"""

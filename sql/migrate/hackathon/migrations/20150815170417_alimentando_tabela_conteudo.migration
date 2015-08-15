@@ -1,0 +1,10 @@
+#-*- coding:utf-8 -*-
+SQL_UP = u"""
+INSERT INTO conteudo (title , pontos_id , created_at , updated_at) VALUES ('exercicio 1', '3', '', '');
+INSERT INTO conteudo (title , pontos_id , created_at , updated_at) VALUES ('exercicio 2', '5', '', '');
+INSERT INTO conteudo (title , pontos_id , created_at , updated_at) VALUES ('exercicio 3', '1', '', '');
+"""
+
+SQL_DOWN = u"""
+TRUNCATE conteudo;
+"""

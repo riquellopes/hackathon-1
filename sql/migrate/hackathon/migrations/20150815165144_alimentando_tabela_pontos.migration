@@ -1,0 +1,13 @@
+#-*- coding:utf-8 -*-
+SQL_UP = u"""
+INSERT INTO pontos  (label, src, score, created_at, updated_at) VALUES ('broze', '', '10', '', '');
+INSERT INTO pontos  (label, src, score, created_at, updated_at) VALUES ('prata', '', '20', '', '');
+INSERT INTO pontos  (label, src, score, created_at, updated_at) VALUES ('ouro', '', '30', '', '');
+INSERT INTO pontos  (label, src, score, created_at, updated_at) VALUES ('platina', '', '40', '', '');
+INSERT INTO pontos  (label, src, score, created_at, updated_at) VALUES ('diamante', '', '50', '', '');
+
+"""
+
+SQL_DOWN = u"""
+TRUNCATE pontos;
+"""

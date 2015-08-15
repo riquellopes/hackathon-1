@@ -1,0 +1,10 @@
+#-*- coding:utf-8 -*-
+SQL_UP = u"""
+INSERT INTO types (name) VALUES ('videos');
+INSERT INTO types (name) VALUES ('fotos');
+INSERT INTO types (name) VALUES ('texto');
+"""
+
+SQL_DOWN = u"""
+TRUNCATE types;
+"""

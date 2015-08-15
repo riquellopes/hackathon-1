@@ -1,0 +1,10 @@
+#-*- coding:utf-8 -*-
+SQL_UP = u"""
+INSERT INTO users (username, user_email, created_at, updated_at) VALUES ('joao', 'joao@gmail.com', '', '');
+INSERT INTO users (username, user_email, created_at, updated_at) VALUES ('maria', 'maria@gmail.com', '', '');
+INSERT INTO users (username, user_email, created_at, updated_at) VALUES ('jose', 'jose@gmail.com', '', '');
+"""
+
+SQL_DOWN = u"""
+TRUNCATE users;
+"""

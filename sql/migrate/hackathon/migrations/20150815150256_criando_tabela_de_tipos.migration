@@ -1,0 +1,11 @@
+#-*- coding:utf-8 -*-
+SQL_UP = u"""
+CREATE TABLE IF NOT EXISTS `types` (
+  `id` INT(11) UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL)
+ENGINE = InnoDB;
+"""
+
+SQL_DOWN = u"""
+DROP TABLE types;
+"""
