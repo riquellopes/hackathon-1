@@ -26,8 +26,6 @@ class SiteController extends BaseController
         $post = $request->request->all();
 
         $exercicio = new ConteudosLogic();
-        $teste = $exercicio->getConteudoById($post['idExercicio']);
-        var_dump($post);
         $return['exercicios'] = $exercicio->getConteudoById($post['idExercicio']);
 
         $pontos = new PontosLogic();
