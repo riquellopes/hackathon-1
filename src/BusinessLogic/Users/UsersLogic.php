@@ -17,6 +17,14 @@ class UsersLogic extends BaseBusinessLogic {
         }
     }
 
+    public function getUserByEmail($email) {
+        try{
+
+        } catch(\Exception $e) {
+            throw $e;
+        }
+    }
+
     public function voceTem($idUser)
     {
         $sql = <<<SQL
