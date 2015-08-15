@@ -3,7 +3,9 @@
 namespace Controllers;
 
 use \BusinessLogic\Conteudos\ConteudosLogic;
-use \BusinessLogic\Pontos\PontosLogic;
+use BusinessLogic\Pontos\PontosLogic;
+use BusinessLogic\Users\UsersLogic;
+use Symfony\Component\HttpFoundation\Request;
 
 class SiteController extends BaseController
 {
@@ -19,12 +21,18 @@ class SiteController extends BaseController
         return $this->app['twig']->render('/site/index.html', array('title' => 'Spoiler'));
     }
 
-    public function step($id){
+    public function step(Request $request){
+
+        $post = $request->request->all();
+
         $exercicio = new ConteudosLogic();
+        $return['exercicios'] = $exercicio->getConteudoById($post['idExercicio']);
 
-        $return = $exercicio->getConteudoById($id);
+        $pontos = new PontosLogic();
+        $return['pontos'] = $pontos->getPontosById($exercicio->pontos_id);
 
-        var_dump($return);
+        $usuario = new UsersLogic();
+        $return['usuario'] = $usuario->getUserByEmail($post['user']);
 
         $this->app['twig']->addGlobal('layout_site', $this->app['twig']->loadTemplate('layout-site.html'));
         return $this->app['twig']->render('/site/exercicio.html', array('title' => 'Spoiler'));

@@ -20,7 +20,7 @@ class ConteudosLogic extends BaseBusinessLogic
 
     public function getConteudoById($conteudoId) {
         try{
-            
+
         return (new Conteudos())->find($conteudoId);
 
         } catch(Exception $e) {

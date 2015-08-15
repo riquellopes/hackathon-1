@@ -18,4 +18,15 @@ class PontosLogic extends BaseBusinessLogic
             throw $e;
         }
     }
+
+    public function getPontosById($pontosId) {
+        try{
+
+            return (new Pontos())->find($pontosId);
+
+        } catch(Exception $e) {
+            throw $e;
+        }
+    }
+
 }
