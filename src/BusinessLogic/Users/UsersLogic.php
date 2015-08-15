@@ -5,9 +5,7 @@ use BusinessLogic\Commons\BaseBusinessLogic;
 use BusinessLogic\Users\Models\Users;
 
 class UsersLogic extends BaseBusinessLogic {
-    /*
-     * Pegar todos os pontos
-     */
+
     public function getAll()
     {
         try {
@@ -19,7 +17,7 @@ class UsersLogic extends BaseBusinessLogic {
 
     public function getUserByEmail($email) {
         try{
-
+            return (new Users())->find('all', array('conditions' => array('user_email'=>$email)));
         } catch(\Exception $e) {
             throw $e;
         }
