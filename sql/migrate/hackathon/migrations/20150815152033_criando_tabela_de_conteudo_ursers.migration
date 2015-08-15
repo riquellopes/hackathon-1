@@ -1,0 +1,15 @@
+#-*- coding:utf-8 -*-
+SQL_UP = u"""
+CREATE TABLE conteudo_users
+(
+    id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    user_id INT(11) UNSIGNED NOT NULL,
+	conteudo_id INT(11) UNSIGNED NOT NULL,
+    created_at TIMESTAMP DEFAULT '0000-00-00 00:00:00' NOT NULL
+ )
+ENGINE = InnoDB;
+"""
+
+SQL_DOWN = u"""
+DROP TABLE conteudo_users
+"""

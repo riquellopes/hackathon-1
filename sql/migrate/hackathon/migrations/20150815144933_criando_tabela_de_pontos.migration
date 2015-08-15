@@ -1,0 +1,17 @@
+#-*- coding:utf-8 -*-
+SQL_UP = u"""
+CREATE TABLE pontos
+(
+    id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    label VARCHAR(100) NOT NULL,
+    src VARCHAR(255) NOT NULL,
+    score INT(11) NOT NULL,
+    created_at TIMESTAMP DEFAULT '0000-00-00 00:00:00' NOT NULL,
+    updated_at TIMESTAMP DEFAULT '0000-00-00 00:00:00' NOT NULL
+)
+ENGINE = InnoDB;
+"""
+
+SQL_DOWN = u"""
+DROP TABLE pontos;
+"""

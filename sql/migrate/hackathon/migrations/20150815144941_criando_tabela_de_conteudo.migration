@@ -1,0 +1,16 @@
+#-*- coding:utf-8 -*-
+SQL_UP = u"""
+CREATE TABLE conteudo
+(
+    id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    title VARCHAR(100) NULL,
+    pontos_id INT(11) UNSIGNED NOT NULL,
+    created_at TIMESTAMP DEFAULT '0000-00-00 00:00:00' NOT NULL,
+    updated_at TIMESTAMP DEFAULT '0000-00-00 00:00:00' NOT NULL
+)
+ENGINE = InnoDB;
+"""
+
+SQL_DOWN = u"""
+DROP TABLE conteudo;
+"""
