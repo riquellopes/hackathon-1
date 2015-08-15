@@ -1,4 +1,5 @@
 <?php
+namespace BusinessLogic\Conteudo
 
 use BusinessLogic\Commons\BaseBusinessLogic;
 use BusinessLogic\Conteudo\Models\Pontos;
