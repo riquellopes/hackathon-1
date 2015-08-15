@@ -1,0 +1,551 @@
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"], input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * MUI Form styles
+ * 
+ */
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: inherit;
+  border: 0;
+}
+
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+input[type="radio"]:disabled,
+input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+}
+
+.mui-form-control {
+  -webkit-animation-duration: 0.0001s;
+  animation-duration: 0.0001s;
+  -webkit-animation-name: mui-node-inserted;
+  animation-name: mui-node-inserted;
+  display: block;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.87);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+  outline: none;
+  height: 32px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0px;
+  background-image: none;
+}
+
+.mui-form-control:focus {
+  border-color: #2196F3;
+  border-width: 2px;
+}
+
+.mui-form-control:disabled,
+.mui-form-control:read-only {
+  cursor: not-allowed;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.mui-form-control::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.26);
+  opacity: 1;
+}
+
+.mui-form-control::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.26);
+  opacity: 1;
+}
+
+.mui-form-control:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.26);
+  opacity: 1;
+}
+
+.mui-form-control::placeholder {
+  color: rgba(0, 0, 0, 0.26);
+  opacity: 1;
+}
+
+textarea.mui-form-control {
+  height: auto;
+}
+
+input.mui-form-control:focus {
+  height: 33px;
+  margin-bottom: -1px;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+.mui-form-group {
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.mui-form-group > label {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mui-form-group > .mui-form-floating-label {
+  position: absolute;
+  top: 15px;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(0, 0, 0, 0.26);
+  text-overflow: clip;
+  cursor: text;
+  pointer-events: none;
+}
+
+.mui-form-group > textarea {
+  padding-top: 5px;
+  min-height: 64px;
+}
+
+.mui-form-group > .mui-form-control {
+  display: block;
+}
+
+.mui-form-group > .mui-form-control:focus ~ label {
+  color: #2196F3;
+}
+
+.mui-form-group[data-mui-wrap-label="true"] {
+  display: table;
+  padding-top: 0px;
+}
+
+.mui-form-group[data-mui-wrap-label="true"] > label:not(.mui-form-floating-label) {
+  display: table-header-group;
+  position: static;
+  white-space: normal;
+  overflow-x: visible;
+}
+
+.mui-form-control:focus ~ .mui-form-floating-label {
+  top: 0px;
+  font-size: 12px;
+  line-height: 15px;
+  text-overflow: ellipsis;
+}
+
+.mui-form-control:not(:focus).mui-not-empty ~ .mui-form-floating-label,
+.mui-form-control:not(:focus)[value]:not([value=""]):not(.mui-empty):not(.mui-not-empty) ~ .mui-form-floating-label,
+.mui-form-control:not(:focus):not(:empty):not(.mui-empty):not(.mui-not-empty) ~ .mui-form-floating-label {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 12px;
+  line-height: 15px;
+  top: 0px;
+  text-overflow: ellipsis;
+}
+
+.mui-radio,
+.mui-checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mui-radio > label,
+.mui-checkbox > label {
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.mui-radio > label > input[type="radio"],
+.mui-radio-inline > label > input[type="radio"],
+.mui-checkbox > label > input[type="checkbox"],
+.mui-checkbox-inline > label > input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px;
+}
+
+.mui-radio + .mui-radio,
+.mui-checkbox + .mui-checkbox {
+  margin-top: -5px;
+}
+
+.mui-radio-inline,
+.mui-checkbox-inline {
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.mui-radio-inline > input[type="radio"],
+.mui-radio-inline > input[type="checkbox"],
+.mui-radio-inline > label > input[type="radio"],
+.mui-radio-inline > label > input[type="checkbox"],
+.mui-checkbox-inline > input[type="radio"],
+.mui-checkbox-inline > input[type="checkbox"],
+.mui-checkbox-inline > label > input[type="radio"],
+.mui-checkbox-inline > label > input[type="checkbox"] {
+  margin: 4px 0 0;
+  line-height: normal;
+}
+
+.mui-radio-inline + .mui-radio-inline,
+.mui-checkbox-inline + .mui-checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.mui-select {
+  position: relative;
+}
+
+.mui-select:focus {
+  outline: 0;
+}
+
+.mui-select:focus > select {
+  height: 33px;
+  margin-bottom: -1px;
+  border-color: #2196F3;
+  border-width: 2px;
+}
+
+.mui-select > select {
+  -webkit-animation-duration: 0.0001s;
+  animation-duration: 0.0001s;
+  -webkit-animation-name: mui-node-inserted;
+  animation-name: mui-node-inserted;
+  display: block;
+  height: 32px;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+  border-radius: 0px;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNiIgd2lkdGg9IjEwIj48cG9seWdvbiBwb2ludHM9IjAsMCAxMCwwIDUsNiIgc3R5bGU9ImZpbGw6cmdiYSgwLDAsMCwuMjQpOyIvPjwvc3ZnPg==");
+  background-repeat: no-repeat;
+  background-position: right center;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  padding: 0 25px 0 0;
+}
+
+.mui-select > select::-ms-expand {
+  display: none;
+}
+
+.mui-select > select:focus {
+  outline: 0;
+  height: 33px;
+  margin-bottom: -1px;
+  border-color: #2196F3;
+  border-width: 2px;
+}
+
+.mui-select > select:disabled {
+  color: rgba(0, 0, 0, 0.26);
+  cursor: not-allowed;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.mui-select-menu {
+  position: absolute;
+  z-index: 1;
+  min-width: 100%;
+  overflow-y: auto;
+  padding: 8px 0;
+  background-color: #FFF;
+  font-size: 16px;
+}
+
+.mui-select-menu > div {
+  padding: 0 22px;
+  height: 42px;
+  line-height: 42px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.mui-select-menu > div:hover {
+  background-color: #E0E0E0;
+}
+
+.mui-select-menu > div[selected] {
+  background-color: #EEEEEE;
+}
+
+@media (min-width: 768px) {
+  .mui-form-inline > * {
+    vertical-align: bottom;
+  }
+  .mui-form-inline > .mui-form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .mui-form-inline > .mui-form-control,
+  .mui-form-inline > .mui-form-group > .mui-form-group {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .mui-form-inline > .mui-radio,
+  .mui-form-inline > .mui-checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .mui-form-inline > .mui-radio > label,
+  .mui-form-inline > .mui-checkbox > label {
+    padding-left: 0;
+  }
+  .mui-form-inline > .mui-radio > label > input[type="radio"],
+  .mui-form-inline > .mui-checkbox > label > input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+  .mui-form-inline > .mui-select {
+    display: inline-block;
+  }
+  .mui-form-inline > .mui-btn {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.mui-form-control:invalid:not(:focus):not(:required),
+.mui-form-control:invalid:not(:focus):required.mui-not-empty,
+.mui-form-control:invalid:not(:focus):required.mui-empty.mui-dirty,
+.mui-form-control:invalid:not(:focus):required[value]:not([value=""]):not(.mui-empty):not(.mui-not-empty),
+.mui-form-control:invalid:not(:focus):required:not(:empty):not(.mui-empty):not(.mui-not-empty) {
+  border-color: #F44336;
+  border-width: 2px;
+}
+
+input.mui-form-control:invalid:not(:focus):not(:required),
+input.mui-form-control:invalid:not(:focus):required.mui-not-empty,
+input.mui-form-control:invalid:not(:focus):required.mui-empty.mui-dirty,
+input.mui-form-control:invalid:not(:focus):required[value]:not([value=""]):not(.mui-empty):not(.mui-not-empty),
+input.mui-form-control:invalid:not(:focus):required:not(:empty):not(.mui-empty):not(.mui-not-empty) {
+  height: 33px;
+  margin-bottom: -1px;
+}
+
+.mui-form-group > .mui-form-control:invalid:not(:focus):not(:required) ~ label,
+.mui-form-group > .mui-form-control:invalid:not(:focus):required.mui-not-empty ~ label,
+.mui-form-group > .mui-form-control:invalid:not(:focus):required[value]:not([value=""]):not(.mui-empty):not(.mui-not-empty) ~ label,
+.mui-form-group > .mui-form-control:invalid:not(:focus):required:not(:empty):not(.mui-empty):not(.mui-not-empty) ~ label {
+  color: #F44336;
+}
+
+.mui-form-group > .mui-form-control:invalid:not(:focus):required.mui-empty.mui-dirty ~ label:not(.mui-form-floating-label) {
+  color: #F44336;
+}
