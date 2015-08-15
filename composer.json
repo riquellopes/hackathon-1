@@ -16,6 +16,7 @@
         "symfony/process": "2.5.2",
         "symfony/security": "2.5.2",
         "symfony/translation": "2.5.2",
+	"symfony/twig-bridge": "2.5.3",
         "symfony/validator": "2.5.2",
         "symfony/monolog-bridge": "2.5.2",
         "symfony/yaml": "2.5.2",
