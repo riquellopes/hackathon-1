@@ -4,7 +4,7 @@ namespace BusinessLogic\Pontos\Models;
 
 use BusinessLogic\Commons\BaseModel;
 
-class Courses extends BaseModel
+class Pontos extends BaseModel
 {
     private $label;
     private $src;
