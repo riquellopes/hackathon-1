@@ -1,4 +1,5 @@
 <?php
+namespace BusinessLogic\Dicas
 
 use BusinessLogic\Commons\BaseBusinessLogic;
 use BusinessLogic\Pontos\Models\Dicas;

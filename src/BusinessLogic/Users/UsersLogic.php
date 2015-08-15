@@ -1,4 +1,5 @@
 <?php
+namespace BusinessLogic\Users
 
 use BusinessLogic\Commons\BaseBusinessLogic;
 use BusinessLogic\Users\Model\Users;
