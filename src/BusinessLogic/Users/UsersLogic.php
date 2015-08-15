@@ -3,7 +3,7 @@
 use BusinessLogic\Commons\BaseBusinessLogic;
 use BusinessLogic\Users\Model\Users;
 
-class PontosLogic extends BaseBusinessLogic
+class UsersLogic extends BaseBusinessLogic
 {
     /*
      * Pegar todos os pontos
