@@ -49,7 +49,7 @@ resque-web -p 5678
 
 echo "-- Instalando MySql --"
 apt-get install -y mysql-server-5.6
-cp /home/vagrant/hackathon/server-confs/my.conf /etc/mysql/my.conf
+cp /home/vagrant/hackathon/server-confs/my.conf /etc/mysql/my.cnf
 /etc/init.d/mysql restart
 
 echo "-- Configurando MySql --"
