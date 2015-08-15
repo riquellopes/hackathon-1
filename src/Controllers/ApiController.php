@@ -2,6 +2,8 @@
 
 namespace Controllers;
 
+use \BusinessLogic\Users\UsersLogic;
+
 class ApiController extends BaseController
 {
 
@@ -18,15 +20,13 @@ class ApiController extends BaseController
     }
 
     public function total_pontos($id){
-        return $this->app->json(
-            array("show"=>"AAA")
-        );
+        $user = new UsersLogic();
+        return $this->app->json($user->voceTem($id));
     }
 
     public function total_dicas($id){
-        return $this->app->json(
-            array("show"=>"AAA")
-        );
+        $user = new UsersLogic();
+        return $this->app->json($user->voceTem($id));
     }
 
     public function pontos_proxima($id){
@@ -35,9 +35,8 @@ class ApiController extends BaseController
         );
     }
     public function medalhas(){
-        return $this->app->json(
-            array("show"=>"AAA")
-        );
+        $user = new UsersLogic();
+        return $this->app->json($user->medalhas());
     }
 
     public function missoes(){
