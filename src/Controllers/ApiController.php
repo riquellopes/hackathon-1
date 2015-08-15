@@ -31,7 +31,7 @@ class ApiController extends BaseController
 
     public function pontos_proxima($id){
         return $this->app->json(
-            array("show"=>"AAA")
+            array("pontos_proxima"=>20)
         );
     }
     public function medalhas(){
@@ -40,8 +40,14 @@ class ApiController extends BaseController
     }
 
     public function missoes(){
-        return $this->app->json(
-            array("show"=>"AAA")
+        $misssoes = array(
+            array("nome"=>"", "icone"=>""),
+            array("nome"=>"", "icone"=>""),
+            array("nome"=>"", "icone"=>""),
+            array("nome"=>"", "icone"=>""),
+            array("nome"=>"", "icone"=>"")
         );
+
+        return $this->app->json($misssoes);
     }
 }
